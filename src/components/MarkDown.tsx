@@ -8,7 +8,7 @@ import styled from "styled-components";
 import tw from "twin.macro";
 
 import { BLOG_MAP } from "@/blog";
-import { Banner } from "@/components/Banner";
+import { Banner } from "@/containers/Banner";
 import { BlogMapKeyTypes } from "@/types/blog";
 
 const Container = styled.div`

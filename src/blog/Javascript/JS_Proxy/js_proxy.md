@@ -1,4 +1,4 @@
-# [筆記] new Proxy
+# [筆記] JS Proxy
 
 > - [快来围观一下 JavaScript 的 Proxy](https://juejin.cn/post/6844903613001629703)
 > - [bilibili-前端小夏老師](https://reurl.cc/XEl3Ge)

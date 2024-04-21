@@ -3,12 +3,13 @@ import styled from "styled-components";
 import tw from "twin.macro";
 
 import { TagsColor } from "@/constants/tags";
-import { ArticlesTag } from "@/types/card";
+import { BlogMapKeyTypes } from "@/types/blog";
+import { CardProps } from "@/types/card";
 import { timestampToDate } from "@/utils/date";
 
 const CardContainer = styled.div`
-  ${tw`bg-[white] p-5 rounded-xl cursor-pointer`}
-  /* box-shadow: 0px 10px 20px rgba(0,0,0,0.5); */
+  ${tw`bg-[white] p-5 rounded-xl cursor-pointer gap-[.5rem] flex flex-col`}
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
   transition: 0.3s;
   &:hover {
     scale: 1.05;
@@ -16,7 +17,11 @@ const CardContainer = styled.div`
 `;
 
 const CardImage = styled.img`
-  ${tw`w-full rounded-lg`}
+  ${tw`w-full rounded-lg h-[17.5rem] bg-cover`}
+`;
+
+const CardImageText = styled.div`
+  ${tw`bg-amber-100 text-[#676767] w-full rounded-lg h-[17.5rem] flex items-center justify-center font-extrabold text-[2rem]`}
 `;
 
 const CardTitle = styled.div`
@@ -43,35 +48,29 @@ const CardDescription = styled.div`
   overflow: hidden;
 `;
 
-type CardProps = {
-  id: number;
-  imgUrl: string;
-  title: string;
-  tags: ArticlesTag[];
-  description: string;
-  publishTime: number;
-};
-
 export const Card = (props: CardProps) => {
-  const {
-    id = 0,
-    imgUrl = "https://fakeimg.pl/320x280/",
-    title = "測試",
-    tags = ["Javascript", "React", "Vue", "CSS"],
-    description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, ipsa, Consequuntur, ipsa!r sit amet consectetur, ipsa, Consequuntur, ipsa!r sit amet consectetur",
-    publishTime = 1349856000000,
-  } = props;
+  const { id, coverImg, title, tags, description, publishTime } = props;
 
   const navigate = useNavigate();
-  const time = timestampToDate(publishTime);
 
-  const handleClick = (id: number) => () => {
+  const time = (() => {
+    return typeof publishTime === "string"
+      ? publishTime
+      : timestampToDate(publishTime);
+  })();
+
+  const handleClick = (id: BlogMapKeyTypes) => () => {
     navigate(`/articles/${id}`);
   };
 
   return (
     <CardContainer onClick={handleClick(id)}>
-      <CardImage src={imgUrl} />
+      {coverImg ? (
+        <CardImage src={coverImg} />
+      ) : (
+        <CardImageText>{id}</CardImageText>
+      )}
+
       <CardTitle>{title}</CardTitle>
       <CardBadgeWrapper>
         {tags.map((tag) => (

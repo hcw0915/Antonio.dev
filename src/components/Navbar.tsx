@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import tw from "twin.macro";
 
-import Github from "@/assets/github-mark.svg?react";
+import { SOCIAL_MEDIA_LIST } from "@/constants/social";
+
+const socialMediaList = SOCIAL_MEDIA_LIST;
 
 const Container = styled.div`
   ${tw`relative text-white font-semibold text-[6rem] px-10 py-4 font-handlee flex flex-col items-center justify-center border-b-2 border-[white] mb-2`}
@@ -30,7 +32,11 @@ const SubTitle = styled.div`
 `;
 
 const SvgContainer = styled.div`
-  ${tw`z-20 flex items-center justify-center gap-3`}
+  ${tw`z-20 flex items-center justify-center gap-[1.25rem]`}
+`;
+
+const Link = styled.a`
+  ${tw`hover:scale-125 cursor-pointer`}
 `;
 
 export const Navbar = () => {
@@ -42,9 +48,14 @@ export const Navbar = () => {
       </TextContainer>
       {/* // TODO icon need to be adjust */}
       <SvgContainer>
-        <Github width={32} height={32} />
-        <Github width={32} height={32} />
-        <Github width={32} height={32} />
+        {socialMediaList.map((item) => {
+          const Component = item.icon;
+          return (
+            <Link href={item.url} target="_blank">
+              <Component width={32} height={32} />
+            </Link>
+          );
+        })}
       </SvgContainer>
     </Container>
   );
