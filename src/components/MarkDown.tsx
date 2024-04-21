@@ -1,52 +1,63 @@
-import React, { useState, useEffect } from 'react'
-import ReactMarkdown from 'react-markdown'
-import remarkGfm from 'remark-gfm'
-import README from './README.md'
+import { useEffect, useState } from "react";
+import ReactMarkdown from "react-markdown";
+import { useLocation } from "react-router-dom";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { atomDark as theme } from "react-syntax-highlighter/dist/esm/styles/prism";
+import remarkGfm from "remark-gfm";
+import styled from "styled-components";
+import tw from "twin.macro";
 
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
-import { atomDark as theme } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import { BLOG_MAP } from "@/blog";
+import { Banner } from "@/components/Banner";
+import { BlogMapKeyTypes } from "@/types/blog";
+
+const Container = styled.div`
+  ${tw`bg-[#efefef] flex flex-col items-center justify-center pb-[10rem]`}
+`;
+
+const blogMap = BLOG_MAP;
 
 const MarkdownBlog = () => {
-	const [markdownContent, setMarkdownContent] = useState('')
+  const { pathname } = useLocation();
+  const [markdownContent, setMarkdownContent] = useState("");
 
-	useEffect(() => {
-		// 从服务器获取 Markdown 文件的内容，这里可以使用任何方式获取你的 Markdown 内容
-		fetch(README)
-			.then((response) => response.text())
-			.then((text) => {
-				setMarkdownContent(text)
-			})
-	}, [])
+  const blogId = pathname.split("/").at(-1) as BlogMapKeyTypes;
 
-	return (
-		<div className="blog-content">
-			{/* <ReactMarkdown /> */}
-			<ReactMarkdown
-				className={'prose'}
-				remarkPlugins={[remarkGfm]}
-				children={markdownContent}
-				components={{
-					code(props) {
-						const { children, className, node, ...rest } = props
-						const match = /language-(\w+)/.exec(className || '')
-						return match ? (
-							<SyntaxHighlighter
-								{...rest}
-								PreTag="div"
-								children={String(children).replace(/\n$/, '')}
-								language={match[1]}
-								style={theme}
-							/>
-						) : (
-							<code {...rest} className={className}>
-								{children}
-							</code>
-						)
-					}
-				}}
-			/>
-		</div>
-	)
-}
+  useEffect(() => {
+    fetch(blogMap[blogId].file)
+      .then((response) => response.text())
+      .then((text) => {
+        setMarkdownContent(text);
+      });
+  }, [pathname, blogId]);
 
-export default MarkdownBlog
+  return (
+    <Container>
+      <Banner />
+      <ReactMarkdown
+        className={"prose mt-5"}
+        remarkPlugins={[remarkGfm]}
+        children={markdownContent}
+        components={{
+          code: (props) => {
+            const { children, className, inline } = props;
+            const match = /language-(\w+)/.exec(className || "");
+            return match ? (
+              <SyntaxHighlighter
+                inline={inline}
+                PreTag="div"
+                children={String(children).replace(/\n$/, "")}
+                language={match[1]}
+                style={theme}
+              />
+            ) : (
+              <code className={className}>{children}</code>
+            );
+          },
+        }}
+      />
+    </Container>
+  );
+};
+
+export default MarkdownBlog;
