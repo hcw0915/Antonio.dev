@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-// import MarkdownBlog from "@/components/Markdown";
+import MarkdownBlog from "@/components/Markdown";
 // import { Playground } from "@/components/Playground";
 // import { About } from "@/pages/About";
 import { Articles } from "@/pages/Articles";
@@ -13,6 +13,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Articles />} />
+        <Route path="/:id" element={<MarkdownBlog />} />
       </Routes>
 
       {/* version 2  */}

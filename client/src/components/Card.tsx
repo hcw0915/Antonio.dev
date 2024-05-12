@@ -60,7 +60,7 @@ export const Card = (props: CardProps) => {
   })();
 
   const handleClick = (id: BlogMapKeyTypes) => () => {
-    navigate(`/articles/${id}`);
+    navigate(`/${id}`);
   };
 
   return (

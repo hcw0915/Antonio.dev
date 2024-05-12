@@ -25,6 +25,5 @@ export const Playground = () => {
         editorHeight: 680,
       }}
     />
-    // </div>
   );
 };
