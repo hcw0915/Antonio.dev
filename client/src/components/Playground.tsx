@@ -2,37 +2,22 @@ import { type SandpackPredefinedTemplate } from "@codesandbox/sandpack-react";
 import { nightOwl } from "@codesandbox/sandpack-themes";
 
 type PlaygroundProps = {
-  code?: string;
+  code?: any;
   langType?: SandpackPredefinedTemplate;
 };
 
 import { Sandpack } from "@codesandbox/sandpack-react";
 
+import setupFiles from "@/example/demo";
+
 export const Playground = (props: PlaygroundProps) => {
-  const { code = "console.log('hello world')", langType = "react" } = props;
-
-  const files = {
-    "/App.js": `
-import React from 'react';
-
-function App() {
-  const [count, setCount] = React.useState(0);
-  console.log('asdasd')
+  const { code, langType = "react" } = props;
 
   return (
-    <button onClick={() => setCount(count + 1)}>
-      Count: {count}
-    </button>
-  );
-}
-export default App;
-    `,
-  };
-
-  return (
+    // https://www.ctnicholas.dev/articles/how-to-use-sandpack-for-code-demos
     <Sandpack
-      files={files}
-      template={langType}
+      files={{ ...setupFiles }}
+      template={"static"}
       theme={nightOwl}
       options={{
         showConsole: true,
