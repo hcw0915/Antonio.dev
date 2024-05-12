@@ -12,7 +12,7 @@ const Quote = styled.div`
 export const Banner = () => {
   return (
     <Container>
-      <img src="/src/assets/frontend.webp" alt="" />
+      <img src="/assets/frontend.webp" />
       <Quote>
         Image from medium{" "}
         <a

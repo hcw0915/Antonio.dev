@@ -1,6 +1,6 @@
 # [筆記]JS-無宣告/var/let/const
 
-![](/src/blog/Javascript/JS_variables/variables.webp)
+![](/blog/JS_Variables/variables.webp)
 https://dev.to/niharrs/demystifying-var-let-and-const-1olf
 
 #### 先前並沒有把 JS 基礎打好，因此在面試的時候對於作用域的概念有點一知半解，所以還是需要做個筆記稍微歸類一下，如果有錯誤的地方還麻煩指正一下=) 大大感謝。

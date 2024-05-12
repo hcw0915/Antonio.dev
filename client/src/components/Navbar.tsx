@@ -10,7 +10,7 @@ const Container = styled.div`
 
   &::before {
     ${tw`absolute w-full h-full top-0 left-0 content-['']`}
-    background-image: url("/src/assets/car.webp");
+    background-image: url("/assets/car.webp");
     /* background-attachment: ; */
     background-position: top bottom;
     background-size: cover;

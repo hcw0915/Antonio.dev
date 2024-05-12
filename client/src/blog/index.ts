@@ -9,7 +9,7 @@ import { BlogMapTypes } from "@/types/blog";
 export const BLOG_MAP: BlogMapTypes = {
   js_variables: {
     id: "js_variables",
-    coverImg: "/src/blog/Javascript/JS_Variables/variables.webp",
+    coverImg: "/blog/JS_Variables/variables.webp",
     title: "[筆記] JS-無宣告/var/let/const",
     tags: ["Javascript"],
     description: "",

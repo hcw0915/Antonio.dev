@@ -12,7 +12,7 @@ import { Banner } from "@/containers/Banner";
 import { BlogMapKeyTypes } from "@/types/blog";
 
 const Container = styled.div`
-  ${tw`bg-[#efefef] flex flex-col items-center justify-center pb-[10rem]`}
+  ${tw`bg-[#efefef] flex flex-col  items-center justify-center pb-[10rem]`}
 `;
 
 const blogMap = BLOG_MAP;
@@ -35,7 +35,7 @@ const MarkdownBlog = () => {
     <Container>
       <Banner />
       <ReactMarkdown
-        className={"prose mt-5"}
+        className={"prose text-[1.5rem] mt-5"}
         remarkPlugins={[remarkGfm]}
         children={markdownContent}
         components={{
