@@ -79,8 +79,10 @@ export const HomePage = () => {
   };
 
   const handleMouseEnter = (id: number) => {
+    console.log(";;;");
     if (document.body) {
-      document.body.style.background = navConfig[id].subBgColor;
+      console.log(";;;");
+      document.body.style.backgroundColor = navConfig[id].subBgColor;
       document.body.style.transition = ".8s";
     }
   };

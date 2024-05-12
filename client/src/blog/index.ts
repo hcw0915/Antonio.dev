@@ -1,11 +1,10 @@
-import logo from "@/assets/Ant.png";
 import JS_Proxy from "@/blog/Javascript/JS_Proxy/js_proxy.md";
 import JS_ShallowDeep from "@/blog/Javascript/JS_ShallowDeep/js_shallowDeep.md";
 import JS_Variables from "@/blog/Javascript/JS_Variables/js_variables.md";
 import React_useState from "@/blog/React/hooks/useState/useState.md";
 import { BlogMapTypes } from "@/types/blog";
 
-const defaultCoverImage = logo;
+// const defaultCoverImage = logo;
 
 export const BLOG_MAP: BlogMapTypes = {
   js_variables: {

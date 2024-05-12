@@ -1,31 +1,3 @@
-// export const demoCode = {
-//   code: `
-// import React from 'react';
-
-// function App() {
-//   const [count, setCount] = React.useState(0);
-//   console.log('asdasdwww')
-
-//   return (
-//     <button onClick={() => setCount(count + 1)}>
-//       Count: {count}
-//     </button>
-//   );
-// }
-// export default App;
-//     `,
-//   type: "vite-react",
-// };
-
-// export const demoCode = {
-//   code: `
-// <body>
-//   <button>Hello world</button>
-// </body>
-//     `,
-//   type: "static",
-// };
-
 const IndexJs = `
 console.log('hello')
 `;
