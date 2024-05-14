@@ -1,12 +1,20 @@
+import JS_URL from "@/blog/Javascript/JS_new_URL/js_url.md";
 import JS_Proxy from "@/blog/Javascript/JS_Proxy/js_proxy.md";
 import JS_ShallowDeep from "@/blog/Javascript/JS_ShallowDeep/js_shallowDeep.md";
 import JS_Variables from "@/blog/Javascript/JS_Variables/js_variables.md";
 import React_useState from "@/blog/React/hooks/useState/useState.md";
 import { BlogMapTypes } from "@/types/blog";
 
-// const defaultCoverImage = logo;
-
 export const BLOG_MAP: BlogMapTypes = {
+  js_new_URL: {
+    id: "js_new_URL",
+    coverImg: "",
+    title: "[筆記] new URL & URLSearchParams",
+    tags: ["Javascript"],
+    description: "",
+    publishTime: "2024/05/14",
+    file: JS_URL,
+  },
   js_variables: {
     id: "js_variables",
     coverImg: "/blog/JS_Variables/variables.webp",
