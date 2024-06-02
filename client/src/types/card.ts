@@ -7,7 +7,8 @@ export type ArticlesTag =
   | "CSS"
   | "HTML"
   | "React"
-  | "Vue";
+  | "Vue"
+  | "Other";
 
 export type CardProps = {
   id: BlogMapKeyTypes;

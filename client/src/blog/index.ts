@@ -1,11 +1,41 @@
+import Blog_Refactor from "@/blog/Articles/refactorStep.md";
 import JS_URL from "@/blog/Javascript/JS_new_URL/js_url.md";
 import JS_Proxy from "@/blog/Javascript/JS_Proxy/js_proxy.md";
 import JS_ShallowDeep from "@/blog/Javascript/JS_ShallowDeep/js_shallowDeep.md";
 import JS_Variables from "@/blog/Javascript/JS_Variables/js_variables.md";
 import React_useState from "@/blog/React/hooks/useState/useState.md";
+import React_generalComponent from "@/blog/React/others/React_GeneralComponent.md";
+import TS_Signatures from "@/blog/Typescript/TS_Signatures.md";
 import { BlogMapTypes } from "@/types/blog";
 
 export const BLOG_MAP: BlogMapTypes = {
+  blog_refactor: {
+    id: "blog_refactor",
+    coverImg: "",
+    title: "[心得] 專案重構基礎流程",
+    tags: ["Other"],
+    description: "",
+    publishTime: "2024/06/02",
+    file: Blog_Refactor,
+  },
+  react_component: {
+    id: "react_component",
+    coverImg: "",
+    title: "[筆記] React 客製組件型別",
+    tags: ["Typescript", "React"],
+    description: "",
+    publishTime: "2024/06/02",
+    file: React_generalComponent,
+  },
+  ts_signatures: {
+    id: "ts_signatures",
+    coverImg: "",
+    title: "[筆記] Typescript 索引簽名",
+    tags: ["Typescript"],
+    description: "",
+    publishTime: "2024/05/26",
+    file: TS_Signatures,
+  },
   js_new_URL: {
     id: "js_new_URL",
     coverImg: "",
