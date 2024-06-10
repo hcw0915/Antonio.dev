@@ -9,7 +9,7 @@ const Quote = styled.div`
   ${tw`absolute right-2 bottom-1 text-[#d0d0d0] text-[.75rem] `}
 `;
 
-export const Banner = () => {
+export const BannerContainer = () => {
   return (
     <Container>
       <img src="/assets/frontend.webp" />

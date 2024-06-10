@@ -32,9 +32,10 @@ const CardBadgeWrapper = styled.div`
   ${tw`flex items-center w-full gap-[0.1rem]`}
 `;
 
-const CardBadge = styled.div<{ bgColor: string }>`
-  ${tw`bg-[red] flex items-center justify-center px-3 m-1 h-[1.5rem] text-[0.875rem] rounded-full`}
+const CardBadge = styled.div<{ bgColor: string; textColor: string }>`
+  ${tw`flex items-center justify-center px-3 m-1 h-[1.5rem] text-[0.875rem] rounded-full`}
   background-color: ${(p) => p.bgColor};
+  color: ${(p) => p.textColor};
 `;
 
 const CardTime = styled.div`
@@ -74,7 +75,11 @@ export const Card = (props: CardProps) => {
       <CardTitle>{title}</CardTitle>
       <CardBadgeWrapper>
         {tags.map((tag) => (
-          <CardBadge key={tag} bgColor={TagsColor[tag]}>
+          <CardBadge
+            key={tag}
+            bgColor={TagsColor[tag].bgColor}
+            textColor={TagsColor[tag].textColor}
+          >
             {tag}
           </CardBadge>
         ))}

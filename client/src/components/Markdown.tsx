@@ -8,7 +8,7 @@ import styled from "styled-components";
 import tw from "twin.macro";
 
 import { BLOG_MAP } from "@/blog";
-import { Banner } from "@/containers/Banner";
+import { BannerContainer } from "@/containers/BannerContainer";
 import { BlogMapKeyTypes } from "@/types/blog";
 
 const Container = styled.div`
@@ -33,7 +33,7 @@ const MarkdownBlog = () => {
 
   return (
     <Container>
-      <Banner />
+      <BannerContainer />
       <ReactMarkdown
         className={"prose text-[1.5rem] mt-5"}
         remarkPlugins={[remarkGfm]}
