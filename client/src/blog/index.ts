@@ -1,4 +1,5 @@
 import Blog_Refactor from "@/blog/Articles/refactorStep.md";
+import Blog_Cookie_Storage from "@/blog/General/Cookie_Storage/Cookie_Storage.md";
 import JS_URL from "@/blog/Javascript/JS_new_URL/js_url.md";
 import JS_Proxy from "@/blog/Javascript/JS_Proxy/js_proxy.md";
 import JS_ShallowDeep from "@/blog/Javascript/JS_ShallowDeep/js_shallowDeep.md";
@@ -9,6 +10,15 @@ import TS_Signatures from "@/blog/Typescript/TS_Signatures.md";
 import { BlogMapTypes } from "@/types/blog";
 
 export const BLOG_MAP: BlogMapTypes = {
+  blog_Cookie_Storage: {
+    id: "blog_Cookie_Storage",
+    coverImg: "",
+    title: "[心得] Cookie LocalStorage SessionStorage 差異",
+    tags: ["Other"],
+    description: "",
+    publishTime: "2024/06/10",
+    file: Blog_Cookie_Storage,
+  },
   blog_refactor: {
     id: "blog_refactor",
     coverImg: "",
