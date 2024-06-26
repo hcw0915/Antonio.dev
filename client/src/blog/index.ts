@@ -5,11 +5,21 @@ import JS_Proxy from "@/blog/Javascript/JS_Proxy/js_proxy.md";
 import JS_ShallowDeep from "@/blog/Javascript/JS_ShallowDeep/js_shallowDeep.md";
 import JS_Variables from "@/blog/Javascript/JS_Variables/js_variables.md";
 import React_useState from "@/blog/React/hooks/useState/useState.md";
+import React_useState_2 from "@/blog/React/hooks/useState/useState_2.md";
 import React_generalComponent from "@/blog/React/others/React_GeneralComponent.md";
 import TS_Signatures from "@/blog/Typescript/TS_Signatures.md";
 import { BlogMapTypes } from "@/types/blog";
 
 export const BLOG_MAP: BlogMapTypes = {
+  react_useState_2: {
+    id: "react_useState_2",
+    coverImg: "",
+    title: "[筆記] useState_2",
+    tags: ["React"],
+    description: "",
+    publishTime: "2024/06/26",
+    file: React_useState_2,
+  },
   blog_Cookie_Storage: {
     id: "blog_Cookie_Storage",
     coverImg: "",
@@ -82,10 +92,10 @@ export const BLOG_MAP: BlogMapTypes = {
     publishTime: "2023/06",
     file: JS_ShallowDeep,
   },
-  react_useState: {
-    id: "react_useState",
+  react_useState_1: {
+    id: "react_useState_1",
     coverImg: "",
-    title: "[筆記] useState",
+    title: "[筆記] useState_1",
     tags: ["React"],
     description: "",
     publishTime: "2023/06",
