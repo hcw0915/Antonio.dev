@@ -7,10 +7,20 @@ import JS_Variables from "@/blog/Javascript/JS_Variables/js_variables.md";
 import React_useState from "@/blog/React/hooks/useState/useState.md";
 import React_useState_2 from "@/blog/React/hooks/useState/useState_2.md";
 import React_generalComponent from "@/blog/React/others/React_GeneralComponent.md";
+import React_Children from "@/blog/React/others/React_Children.md";
 import TS_Signatures from "@/blog/Typescript/TS_Signatures.md";
 import { BlogMapTypes } from "@/types/blog";
 
 export const BLOG_MAP: BlogMapTypes = {
+  react_Children: {
+    id: "react_Children",
+    coverImg: "",
+    title: "[筆記] react_Children",
+    tags: ["React"],
+    description: "",
+    publishTime: "2024/06/26",
+    file: React_Children,
+  },
   react_useState_2: {
     id: "react_useState_2",
     coverImg: "",
