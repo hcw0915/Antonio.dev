@@ -9,9 +9,20 @@ import React_useState_2 from "@/blog/React/hooks/useState/useState_2.md";
 import React_generalComponent from "@/blog/React/others/React_GeneralComponent.md";
 import React_Children from "@/blog/React/others/React_Children.md";
 import TS_Signatures from "@/blog/Typescript/TS_Signatures.md";
+import TS_Infer from "@/blog/Typescript/TS_Infer.md";
 import { BlogMapTypes } from "@/types/blog";
 
 export const BLOG_MAP: BlogMapTypes = {
+  ts_infer: {
+    id: "ts_infer",
+    coverImg: "",
+    title: "[筆記] TS infer 推斷型別",
+    tags: ["Typescript"],
+    description: "",
+    publishTime: "2024/07/27",
+    file: TS_Infer,
+  },
+
   react_Children: {
     id: "react_Children",
     coverImg: "",

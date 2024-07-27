@@ -6,6 +6,8 @@
 
 這次在實際運用過程中主要使配合 `swiper-slider` 套件去做包裝
 
+
+### 🌋  原本使用樣式
 ```typescript
 <Swiper
   spaceBetween={30}
@@ -33,7 +35,9 @@
   ))}
 </Swiper>
 ```
+---
 
+### 🌋 抽出的組件樣式
 ```typescript
 <Swiper
   spaceBetween={spaceBetween}
@@ -52,7 +56,8 @@
   })}
 </Swiper>
 ```
-
+---
+### 🌋 重新組裝後的樣式
 ```typescript
 <SwiperSlideContainer>
   {featureGameItem.map((item) => (
@@ -69,3 +74,8 @@
   ))}
 </SwiperSlideContainer>
 ```
+
+---
+
+重新組裝之後 可以更快速地使用 `swiper` 組件, 說實際連 `key={item}` 也不需要再填寫
+算是較少見用法的其中之一
