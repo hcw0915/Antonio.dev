@@ -14,7 +14,7 @@ const Container = styled.div`
 `;
 
 const CategoryItem = styled.div<{ isSelected?: boolean }>`
-  ${tw`min-w-[6.25rem] border-[0.125rem] border-[#7c9ed1] font-bold p-[0.5rem] rounded-full flex justify-center items-center hover:bg-[#9abcee] cursor-pointer`}
+  ${tw`min-w-[6.25rem] border-[#7c9ed1] border-[0.1875rem] font-bold p-[0.5rem] rounded-full flex justify-center items-center hover:bg-[#9abcee] cursor-pointer`}
   background-color: ${(p) => (p.isSelected ? "#9abcee" : "white")};
 `;
 
@@ -31,7 +31,7 @@ export const FilterContainer = (props: FilterContainerProps) => {
 
   return (
     <Container>
-      {tagList.map((item) => {
+      {["All", ...tagList].map((item) => {
         return (
           <CategoryItem
             key={item}

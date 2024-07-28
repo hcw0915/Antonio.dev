@@ -10,9 +10,19 @@ import React_generalComponent from "@/blog/React/others/React_GeneralComponent.m
 import React_Children from "@/blog/React/others/React_Children.md";
 import TS_Signatures from "@/blog/Typescript/TS_Signatures.md";
 import TS_Infer from "@/blog/Typescript/TS_Infer.md";
+import Vite_BaseConfig from "@/blog/Vite/Vite_config.md";
 import { BlogMapTypes } from "@/types/blog";
 
 export const BLOG_MAP: BlogMapTypes = {
+  vite_baseConfig: {
+    id: "ts_infer",
+    coverImg: "",
+    title: "[筆記] Vite 生產/開發配置小技巧",
+    tags: ["Vite", "FrontendInfra"],
+    description: "",
+    publishTime: "2024/07/28",
+    file: Vite_BaseConfig,
+  },
   ts_infer: {
     id: "ts_infer",
     coverImg: "",
@@ -22,7 +32,6 @@ export const BLOG_MAP: BlogMapTypes = {
     publishTime: "2024/07/27",
     file: TS_Infer,
   },
-
   react_Children: {
     id: "react_Children",
     coverImg: "",

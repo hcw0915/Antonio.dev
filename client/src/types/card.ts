@@ -8,6 +8,7 @@ export type ArticlesTag =
   | "HTML"
   | "React"
   | "Vue"
+  | "Vite"
   | "Other";
 
 export type CardProps = {

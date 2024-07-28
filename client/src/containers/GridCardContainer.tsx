@@ -31,7 +31,7 @@ export const GridCardContainer = (props: GridCardContainerProps) => {
   const { filteredItem } = props;
 
   const filteredBlogList = useMemo(() => {
-    if (!filteredItem) return blogList;
+    if (!filteredItem || filteredItem === "All") return blogList;
     const filterList = blogList.filter((b) =>
       b.tags.includes(filteredItem as ArticlesTag)
     );
