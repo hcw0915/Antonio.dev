@@ -15,7 +15,7 @@ import { BlogMapTypes } from "@/types/blog";
 
 export const BLOG_MAP: BlogMapTypes = {
   vite_baseConfig: {
-    id: "ts_infer",
+    id: "vite_BaseConfig",
     coverImg: "",
     title: "[筆記] Vite 生產/開發配置小技巧",
     tags: ["Vite", "FrontendInfra"],
