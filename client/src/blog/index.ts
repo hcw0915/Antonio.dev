@@ -7,6 +7,7 @@ import JS_Variables from "@/blog/Javascript/JS_Variables/js_variables.md";
 import React_useState from "@/blog/React/hooks/useState/useState.md";
 import React_useState_2 from "@/blog/React/hooks/useState/useState_2.md";
 import React_generalComponent from "@/blog/React/others/React_GeneralComponent.md";
+import React_unStyledComponent from "@/blog/React/others/React_UnstyledComponent.md";
 import React_Children from "@/blog/React/others/React_Children.md";
 import TS_Signatures from "@/blog/Typescript/TS_Signatures.md";
 import TS_Infer from "@/blog/Typescript/TS_Infer.md";
@@ -14,6 +15,15 @@ import Vite_BaseConfig from "@/blog/Vite/Vite_config.md";
 import { BlogMapTypes } from "@/types/blog";
 
 export const BLOG_MAP: BlogMapTypes = {
+  react_unstyledComponent: {
+    id: "react_unstyledComp",
+    coverImg: "",
+    title: "[筆記] React unstyled Component",
+    tags: ["React", "Typescript"],
+    description: "",
+    publishTime: "2024/08/10",
+    file: React_unStyledComponent,
+  },
   vite_baseConfig: {
     id: "vite_BaseConfig",
     coverImg: "",
@@ -69,7 +79,7 @@ export const BLOG_MAP: BlogMapTypes = {
     file: Blog_Refactor,
   },
   react_component: {
-    id: "react_component",
+    id: "react_generalComp",
     coverImg: "",
     title: "[筆記] React 客製組件型別",
     tags: ["Typescript", "React"],
