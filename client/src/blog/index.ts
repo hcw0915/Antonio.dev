@@ -15,7 +15,7 @@ import Vite_BaseConfig from "@/blog/Vite/Vite_config.md";
 import { BlogMapTypes } from "@/types/blog";
 
 export const BLOG_MAP: BlogMapTypes = {
-  react_unstyledComponent: {
+  react_unstyledComp: {
     id: "react_unstyledComp",
     coverImg: "",
     title: "[筆記] React unstyled Component",
@@ -25,7 +25,7 @@ export const BLOG_MAP: BlogMapTypes = {
     file: React_unStyledComponent,
   },
   vite_baseConfig: {
-    id: "vite_BaseConfig",
+    id: "vite_baseConfig",
     coverImg: "",
     title: "[筆記] Vite 生產/開發配置小技巧",
     tags: ["Vite", "FrontendInfra"],
@@ -78,7 +78,7 @@ export const BLOG_MAP: BlogMapTypes = {
     publishTime: "2024/06/02",
     file: Blog_Refactor,
   },
-  react_component: {
+  react_generalComp: {
     id: "react_generalComp",
     coverImg: "",
     title: "[筆記] React 客製組件型別",
