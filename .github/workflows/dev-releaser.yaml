@@ -11,14 +11,13 @@ on:
 jobs:
   build: 
     runs-on: ubuntu-latest
-
+    defaults: 
+      run: 
+        working-directory: client
 
     steps: 
       - name: Checkout Code
         uses: actions/checkout@v3
-
-      - name: Get in to Client
-        run : cd client/
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
