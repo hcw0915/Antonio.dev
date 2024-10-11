@@ -1,5 +1,7 @@
 import Blog_Refactor from "@/blog/Articles/refactorStep.md";
 import Blog_Cookie_Storage from "@/blog/General/Cookie_Storage/Cookie_Storage.md";
+import Eslint_Custom_Rules from "@/blog/General/Eslint_Custom_Rules/Eslint_Custom_Rules.md";
+import Eslint_Simple_sort from "@/blog/General/Eslint_Simple_Sort/Simple_sort.md";
 import JS_URL from "@/blog/Javascript/JS_new_URL/js_url.md";
 import JS_Proxy from "@/blog/Javascript/JS_Proxy/js_proxy.md";
 import JS_ShallowDeep from "@/blog/Javascript/JS_ShallowDeep/js_shallowDeep.md";
@@ -9,13 +11,41 @@ import React_useState_2 from "@/blog/React/hooks/useState/useState_2.md";
 import React_Children from "@/blog/React/others/React_Children.md";
 import React_generalComponent from "@/blog/React/others/React_GeneralComponent.md";
 import React_unStyledComponent from "@/blog/React/others/React_UnstyledComponent.md";
-import Recursive_Folders from "@/blog/React/others/Reursive_Folders.md";
+import Recursive_Folders from "@/blog/React/others/Recursive_Folders.md";
 import TS_Infer from "@/blog/Typescript/TS_Infer.md";
 import TS_Signatures from "@/blog/Typescript/TS_Signatures.md";
 import Vite_BaseConfig from "@/blog/Vite/Vite_config.md";
+import Vite_twinMarco from "@/blog/Vite/Vite_twinMarco.md";
 import { BlogMapTypes } from "@/types/blog";
 
 export const BLOG_MAP: BlogMapTypes = {
+  eslint_custom_rules: {
+    id: "eslint_custom_rules",
+    coverImg: "",
+    title: "[筆記] Custom Eslint Rules 專案內客製化規則",
+    tags: ["Other"],
+    description: "",
+    publishTime: "2024/10/11",
+    file: Eslint_Custom_Rules,
+  },
+  eslint_simple_sort: {
+    id: "eslint_simple_sort",
+    coverImg: "",
+    title: "[筆記] eslint-plugin-simple-import-sort 順序排列",
+    tags: ["Other"],
+    description: "",
+    publishTime: "2024/10/11",
+    file: Eslint_Simple_sort,
+  },
+  vite_twinMarco: {
+    id: "vite_twinMarco",
+    coverImg: "",
+    title: "[筆記] Vite 配置 twin.marco / styled-components 的配置",
+    tags: ["React", 'CSS', 'Vite'],
+    description: "",
+    publishTime: "2024/10/11",
+    file: Vite_twinMarco,
+  },
   recursive_folders: {
     id: "recursive_folders",
     coverImg: "",
