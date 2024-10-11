@@ -13,3 +13,13 @@ body,
   min-height: 100vh;
   box-sizing: border-box;
 }
+
+* {
+  font-family: zen;
+}
+
+@font-face {
+  font-family: zen;
+  src: url('./assets/fonts/ZenMaruGothic-Bold.ttf');
+}
+
