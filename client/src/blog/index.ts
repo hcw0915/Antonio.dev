@@ -2,6 +2,7 @@ import Blog_Refactor from "@/blog/Articles/refactorStep.md";
 import Blog_Cookie_Storage from "@/blog/General/Cookie_Storage/Cookie_Storage.md";
 import Eslint_Custom_Rules from "@/blog/General/Eslint_Custom_Rules/Eslint_Custom_Rules.md";
 import Eslint_Simple_sort from "@/blog/General/Eslint_Simple_Sort/Simple_sort.md";
+import Pnpm_monorepo from "@/blog/General/Pnpm_monorepo/Pnpm_monorepo.md";
 import JS_URL from "@/blog/Javascript/JS_new_URL/js_url.md";
 import JS_Proxy from "@/blog/Javascript/JS_Proxy/js_proxy.md";
 import JS_ShallowDeep from "@/blog/Javascript/JS_ShallowDeep/js_shallowDeep.md";
@@ -19,6 +20,15 @@ import Vite_twinMarco from "@/blog/Vite/Vite_twinMarco.md";
 import { BlogMapTypes } from "@/types/blog";
 
 export const BLOG_MAP: BlogMapTypes = {
+  pnpm_monorepo: {
+    id: "pnpm_monorepo",
+    coverImg: "",
+    title: "[筆記] pnpm Monorepo 簡要說明",
+    tags: ["Other", "FrontendInfra"],
+    description: "",
+    publishTime: "2024/10/18",
+    file: Pnpm_monorepo,
+  },
   eslint_custom_rules: {
     id: "eslint_custom_rules",
     coverImg: "",
