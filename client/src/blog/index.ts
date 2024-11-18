@@ -15,11 +15,21 @@ import React_unStyledComponent from "@/blog/React/others/React_UnstyledComponent
 import Recursive_Folders from "@/blog/React/others/Recursive_Folders.md";
 import TS_Infer from "@/blog/Typescript/TS_Infer.md";
 import TS_Signatures from "@/blog/Typescript/TS_Signatures.md";
+import TS_FormTypes from "@/blog/Typescript/TS_RHF.md";
 import Vite_BaseConfig from "@/blog/Vite/Vite_config.md";
 import Vite_twinMarco from "@/blog/Vite/Vite_twinMarco.md";
 import { BlogMapTypes } from "@/types/blog";
 
 export const BLOG_MAP: BlogMapTypes = {
+  TS_FormTypes: {
+    id: "TS_FormTypes",
+    coverImg: "",
+    title: "[筆記] TS React Hook Form 推斷表單型別",
+    tags: ["React", "Typescript"],
+    description: "",
+    publishTime: "2024/11/18",
+    file: TS_FormTypes,
+  },
   pnpm_monorepo: {
     id: "pnpm_monorepo",
     coverImg: "",
@@ -51,7 +61,7 @@ export const BLOG_MAP: BlogMapTypes = {
     id: "vite_twinMarco",
     coverImg: "",
     title: "[筆記] Vite 配置 twin.marco/styled-components/tailwind",
-    tags: ["React", 'CSS', 'Vite', "FrontendInfra"],
+    tags: ["React", "CSS", "Vite", "FrontendInfra"],
     description: "",
     publishTime: "2024/10/11",
     file: Vite_twinMarco,
